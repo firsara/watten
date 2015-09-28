@@ -1,0 +1,8 @@
+{
+  "directory": "bower_components/",
+  "analytics": false,
+  "timeout": 60000,
+  "scripts": {
+    "postinstall": "grunt bowerRequirejs"
+  }
+}

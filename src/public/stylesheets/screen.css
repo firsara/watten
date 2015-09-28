@@ -1,0 +1,209 @@
+html,
+body,
+.main-wrapper,
+.game-wrapper {
+  height: 100%;
+  overflow: hidden;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.no-transition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  transition: none !important;
+}
+
+
+.card {
+  width: 70px;
+  height: 130px;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+  .card img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 130px;
+  }
+
+  .card .inner {
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    transition: transform 500ms ease;
+    position: absolute;
+    left: 35px;
+    top: 65px;
+    -webkit-perspective: 100px;
+    -moz-perspective: 100px;
+    perspective: 100px;
+  }
+    .card .inner .wrapper {
+      position: absolute;
+      left: -35px;
+      top: -65px;
+    }
+  .card.flip .inner {
+    -webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+    -moz-transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+  }
+
+  .card img {
+    -webkit-transition: opacity 50ms 200ms ease;
+    -moz-transition: opacity 50ms 200ms ease;
+    transition: opacity 50ms 200ms ease;
+  }
+  .card .image {
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .card .preview {
+    opacity: 1;
+  }
+  .card.flip .image {
+    opacity: 1;
+  }
+  .card.flip .preview {
+    opacity: 0;
+  }
+
+
+  .card.center {
+    pointer-events: none;
+  }
+
+
+
+
+
+.player {
+  position: absolute;
+  z-index: 10;
+}
+.player .card {
+  float: left;
+}
+.player-1 .card,
+.player-2 .card,
+.player-3 .card,
+.player-4 .card {
+  margin: 0;
+}
+
+.player .cards {
+  position: relative;
+  float: left;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition: all 800ms ease;
+  -moz-transition: all 800ms ease;
+  transition: all 800ms ease;
+}
+
+
+
+.player-0 {
+  bottom: 50px;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.player-1 {
+  left: 120px;
+  top: 50%;
+
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  -moz-transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.player-2 {
+  top: 50px;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, 0) rotate(180deg);
+  -moz-transform: translate(-50%, 0) rotate(180deg);
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.player-3 {
+  right: -325px;
+  top: 50%;
+
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -moz-transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.player-1 .card,
+.player-2 .card,
+.player-3 .card {
+  pointer-events: none;
+}
+
+.player-0 .card {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+
+.player {
+  width: 450px;
+}
+
+.player .notice {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 100%;
+}
+.player .button-ok {
+  position: absolute;
+  top: -61px;
+  right: 9px;
+}
+
+
+
+.game-wrapper > .card {
+  position: absolute;
+  margin: 0;
+}
+
+
+.current-score {
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+
+.target-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.target-card .pull-left {
+  padding-right: 20px;
+}
+

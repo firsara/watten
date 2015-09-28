@@ -1,0 +1,37 @@
+{
+  "bitwise": true,
+  "curly": false,
+  "eqnull": true,
+  "eqeqeq": true,
+  "forin": false,
+  "freeze": true,
+  "funcscope": true,
+  "futurehostile": true,
+  "iterator": true,
+  "maxerr": 20,
+  "maxparams": false,
+  "maxstatements": false,
+  "noarg": true,
+  "nocomma": false,
+  "nonbsp": true,
+  "nonew": true,
+  "notypeof": false,
+  "unused": false,
+  "latedef": true,
+  "laxbreak": true,
+  "browser": true,
+  "undef": true,
+  "node": true,
+
+  "globals": {
+    "jQuery": true,
+    "$": true,
+
+    "require": true,
+    "requirejs": true,
+    "define": true,
+    "console": true,
+    "alert": true,
+    "nodeRequire": true
+  }
+}
